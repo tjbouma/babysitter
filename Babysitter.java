@@ -46,8 +46,8 @@ public class Babysitter {
 	
 	public int calcTotalPay(int start, int bedtime, int end) throws Exception {
 		Babysitter babysitter = new Babysitter();
-		startPay = babysitter.calcStartPay(5, 9);
-		bedtimePay = babysitter.calcBedtimePay(9, 12);
+		startPay = babysitter.calcStartPay(5, 10);
+		bedtimePay = babysitter.calcBedtimePay(10, 12);
 		midnightPay = babysitter.calcMidnightPay(12, 4);
 		int totalPay;
 		totalPay = (startPay + bedtimePay + midnightPay);
