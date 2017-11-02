@@ -1,3 +1,8 @@
+/*
+ * 
+ * @TrevorBouma
+ */
+
 import static org.junit.Assert.*;
 
 import org.junit.Before;
@@ -14,25 +19,25 @@ public class BabysitterTest {
 
 	@Test
 	public void payFromStartToBedTime() throws Exception {
-		int result = babysitter.calcStartPay(5, 9);
-		assertEquals(48, result);
+		int result = babysitter.calcStartPay(5, 10);
+		assertEquals(60, result);
 	}
 
 	@Test
 	public void payFromBedTimeToMidnight() {
-		int result = babysitter.calcBedtimePay(9, 12);
-		assertEquals(24, result);
+		int result = babysitter.calcBedtimePay(10, 12);
+		assertEquals(16, result);
 	}
 
 	@Test
 	public void payFromMidnightToEnd() throws Exception {
-		int result = babysitter.calcMidnightPay(12, 5);
+		int result = babysitter.calcMidnightPay(12, 4);
 		assertEquals(64, result);
 	}
 
 	@Test
 	public void payForEntireNight() throws Exception {
-		int result = babysitter.calcTotalPay(5, 9, 4);
-		assertEquals(136, result);
+		int result = babysitter.calcTotalPay(5, 10, 4);
+		assertEquals(140, result);
 	}
 }
